@@ -1,37 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oh My Cookness</title>
-    <link rel="icon" href="img/logo.png" type="img/logo.png" />
+    <title>Oh My Cookness - Premium Food Store</title>
+    <link rel="icon" href="img/logo.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header>
-      <a href="https://www.instagram.com/oh_my_cookness" target="_blank"
-        ><img src="img/logo.png" alt="Oh My Cookness" width="100"
-      /></a>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+    <!-- Header with Navigation -->
+    <header class="header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/logo.png" alt="Oh My Cookness" width="120" />
+            </a>
+          </div>
+
+          <nav class="main-nav">
+            <ul>
+              <li><a href="#home" data-i18n="home">Home</a></li>
+              <li><a href="#products" data-i18n="products">Products</a></li>
+              <li><a href="#about" data-i18n="about">About Us</a></li>
+              <li><a href="#contact" data-i18n="contact">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="header-actions">
+            <div class="language-switcher">
+              <button class="language-btn" data-lang="en">EN</button>
+              <button class="language-btn" data-lang="ka">KA</button>
+              <button class="language-btn" data-lang="uk">UK</button>
+            </div>
+            <div class="cart-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </div>
+          </div>
+
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
     </header>
-    <main>
-      <h1>Lorem, ipsum dolor</h1>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-        provident ipsa nihil, corrupti veniam quo.
-      </p>
-      <ul>
-        <li>Lorem ipsum dolor sit amet.</li>
-        <li>Consectetur adipisicing elit.</li>
-        <li>Quisquam, voluptatum.</li>
-        <li>Quidem, asperiores.</li>
-        <li>Doloribus, magnam!</li>
-      </ul>
-    </main>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content">
+          <h1 data-i18n="heroTitle">Premium Quality Food Products</h1>
+          <p data-i18n="heroSubtitle">
+            Discover the finest selection of organic and delicious food items
+          </p>
+          <a href="#products" class="btn btn-primary" data-i18n="shopNow"
+            >Shop Now</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products" id="products">
+      <div class="container">
+        <h2 class="section-title" data-i18n="featuredProducts">
+          Featured Products
+        </h2>
+        <div class="products-grid">
+          <!-- Product items will be dynamically loaded here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2 data-i18n="aboutTitle">About Oh My Cookness</h2>
+            <p data-i18n="aboutText1">
+              We are passionate about bringing you the highest quality food
+              products from trusted sources. Our mission is to provide healthy,
+              delicious options for every meal.
+            </p>
+            <p data-i18n="aboutText2">
+              With years of experience in the food industry, we carefully select
+              each product to ensure it meets our high standards of quality and
+              taste.
+            </p>
+          </div>
+          <div class="about-image">
+            <img
+              src="https://images.unsplash.com/photo-1504674900247-087703934569?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+              alt="About Us"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n="contactUs">Contact Us</h2>
+        <div class="contact-container">
+          <div class="contact-info">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <h3 data-i18n="address">Address</h3>
+                <p>45 Rustaveli Avenue, Tbilisi 0108, Georgia</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <div>
+                <h3 data-i18n="phone">Phone</h3>
+                <p>+995 555 789 234</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <h3>Email</h3>
+                <p>contact@ohmycookness.ge</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <div>
+                <h3 data-i18n="workingHours">Working Hours</h3>
+                <p data-i18n="workingHoursValue">
+                  Monday - Sunday: 9:00 - 21:00
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-form">
+            <form id="contactForm">
+              <div class="form-group">
+                <input type="text" id="name" placeholder=" " required />
+                <label for="name" data-i18n="yourName">Your Name</label>
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" placeholder=" " required />
+                <label for="email" data-i18n="yourEmail">Your Email</label>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  rows="5"
+                  placeholder=" "
+                  required
+                ></textarea>
+                <label for="message" data-i18n="yourMessage"
+                  >Your Message</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                data-i18n="sendMessage"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="img/logo.png" alt="Oh My Cookness" width="100" />
+            <p data-i18n="footerSlogan">Delicious food for everyone</p>
+            <div class="social-links">
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Telegram"
+                ><i class="fab fa-telegram"></i
+              ></a>
+            </div>
+          </div>
+          <div class="footer-links">
+            <h3 data-i18n="quickLinks">Quick Links</h3>
+            <ul>
+              <li><a href="#home" data-i18n="home">Home</a></li>
+              <li><a href="#products" data-i18n="products">Products</a></li>
+              <li><a href="#about" data-i18n="about">About Us</a></li>
+              <li><a href="#contact" data-i18n="contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3 data-i18n="contactUs">Contact Us</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 45 Rustaveli Avenue, Tbilisi
+              0108, Georgia
+            </p>
+            <p><i class="fas fa-phone"></i> +995 555 789 234</p>
+            <p><i class="fas fa-envelope"></i> contact@ohmycookness.ge</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; <span id="currentYear"></span> Oh My Cookness.
+            <span data-i18n="allRightsReserved">All rights reserved.</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="cart-modal">
+      <div class="cart-modal-content">
+        <div class="cart-modal-header">
+          <h2 data-i18n="cartTitle">Shopping Cart</h2>
+          <button class="cart-close-btn" aria-label="Close cart">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="cart-modal-body">
+          <div id="cartItems" class="cart-items">
+            <!-- Cart items will be dynamically loaded here -->
+          </div>
+          <div class="cart-total">
+            <p>
+              <strong data-i18n="total">Total:</strong>
+              <span id="cartTotal">$0.00</span>
+            </p>
+          </div>
+        </div>
+        <div class="cart-modal-footer">
+          <button class="btn btn-primary" id="checkoutBtn" data-i18n="checkout">
+            Checkout
+          </button>
+          <button
+            class="btn btn-secondary"
+            id="clearCartBtn"
+            data-i18n="clearCart"
+          >
+            Clear Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
   </body>
 </html>
